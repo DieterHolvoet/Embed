@@ -24,7 +24,7 @@ class MultipleRequestsTest extends TestCase
         $this->assertEquals('https://github.com/oscarotero', (string) $infos[1]->url);
         $this->assertEquals('oscarotero - Overview', $infos[1]->title);
 
-        $this->assertEquals('https://s.com/misteroom', (string) $infos[2]->url);
+        $this->assertEquals('https://x.com/misteroom', (string) $infos[2]->url);
         $this->assertEquals('en', $infos[2]->language);
     }
 }
