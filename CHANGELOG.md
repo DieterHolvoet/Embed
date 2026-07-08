@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.4.19] - 2026-07-08
+### Changed
+- Access tokens are now optional with Meta (Facebook & Instagram) [#577]
+
+### Fixed
+- Updated tests
+
 ## [4.4.18] - 2026-06-19
 ### Added
 - Add PHPStan Static Analysis (Level Max + Strict Rules) [#562]
@@ -293,7 +300,9 @@ Full library refactoring.
 [#571]: https://github.com/oscarotero/Embed/issues/571
 [#572]: https://github.com/oscarotero/Embed/issues/572
 [#574]: https://github.com/oscarotero/Embed/issues/574
+[#577]: https://github.com/oscarotero/Embed/issues/577
 
+[4.4.19]: https://github.com/oscarotero/Embed/compare/v4.4.18...v4.4.19
 [4.4.18]: https://github.com/oscarotero/Embed/compare/v4.4.17...v4.4.18
 [4.4.17]: https://github.com/oscarotero/Embed/compare/v4.4.16...v4.4.17
 [4.4.16]: https://github.com/oscarotero/Embed/compare/v4.4.15...v4.4.16
