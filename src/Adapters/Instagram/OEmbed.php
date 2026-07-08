@@ -10,7 +10,7 @@ class OEmbed extends Base
 {
     const ENDPOINT = 'https://graph.facebook.com/v25.0/instagram_oembed';
 
-    protected function detectEndpoint(): ?UriInterface
+    protected function detectEndpoint(): UriInterface
     {
         $token = $this->extractor->getSetting('instagram:token');
 
@@ -20,7 +20,7 @@ class OEmbed extends Base
         }
 
         $queryParameters = $this->getOembedQueryParameters((string) $uri);
-        if($token) $queryParameters['access_token'] = $token;
+        if(!empty($token)) $queryParameters['access_token'] = $token;
 
         return $this->extractor->getCrawler()
             ->createUri(self::ENDPOINT)

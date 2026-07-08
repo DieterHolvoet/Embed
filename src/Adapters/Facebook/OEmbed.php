@@ -12,7 +12,7 @@ class OEmbed extends Base
     const ENDPOINT_POST = 'https://graph.facebook.com/v25.0/oembed_post';
     const ENDPOINT_VIDEO = 'https://graph.facebook.com/v25.0/oembed_video';
 
-    protected function detectEndpoint(): ?UriInterface
+    protected function detectEndpoint(): UriInterface
     {
         $token = $this->extractor->getSetting('facebook:token');
 
@@ -24,7 +24,7 @@ class OEmbed extends Base
             }
         }
         $queryParameters = $this->getOembedQueryParameters((string) $uri);
-        if($token) $queryParameters['access_token'] = $token;
+        if(!empty($token)) $queryParameters['access_token'] = $token;
 
         return $this->extractor->getCrawler()
             ->createUri($this->getEndpointByPath($uri->getPath()))
