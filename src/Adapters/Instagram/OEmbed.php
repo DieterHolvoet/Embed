@@ -20,7 +20,7 @@ class OEmbed extends Base
         }
 
         $queryParameters = $this->getOembedQueryParameters((string) $uri);
-        if(!empty($token)) $queryParameters['access_token'] = $token;
+        if(is_string($token)) $queryParameters['access_token'] = $token;
 
         return $this->extractor->getCrawler()
             ->createUri(self::ENDPOINT)
